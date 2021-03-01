@@ -1,8 +1,8 @@
 # nje38mvs
-NJE38: NJE Subsystem for MVS 3.8
-================================
+NJE38: NJE Subsystem for MVS 3.8 - Version 2.2.1
+================================================
 
-January 2021
+March 2021
 
 This is Bob Polmanter's genial NJE subsystem for MVS 3.8. It works perfectly wiht TK4- MVS 3.8 (update 8) and if changes are needed
 for the upcomign version of TK4-, then I will make sure those changes are applied to this repo. 
