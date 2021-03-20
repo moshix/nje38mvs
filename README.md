@@ -285,6 +285,14 @@ Press ENTER. You will see
   
   If you run this system under VM/370 you will be able to edit jobs and submit them from within the VM/370 full screen editor, but, hey, up to you. 
   
+  Documentation
+  =============
+  
+  Kevin Leonard, our amazing JES3, OS/VS1 and OS/VS2 expert extraordinnaire, makes some manuals available here: 
+  http://www.j76.org/vs1/documentation.html
+  
+  
+  
   
   
  
