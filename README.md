@@ -2,10 +2,10 @@
 <a href=" https://github.com/moshix/mvs/blob/master/codenotary.com"><img src="https://raw.githubusercontent.com/moshix/mvs/master/secured-by-immudb.svg" width="109px;"/></a>
 
 # nje38mvs
-NJE38: NJE Subsystem for MVS 3.8 - Version 2.2.1
+NJE38: NJE Subsystem for MVS 3.8 - Version 2.3.0
 ================================================
 
-June 2021
+March 2021
 
 This is Bob Polmanter's genial NJE subsystem for MVS 3.8. It works perfectly wiht TK4- MVS 3.8 (update 8) and if changes are needed
 for the upcomign version of TK4-, then I will make sure those changes are applied to this repo. 
@@ -18,10 +18,10 @@ This software is delivered as is with no guarantee, not from Bob and not from me
 
 The included PDF will help you getting it instsalled. Also, watch my video about how to get it running on the moshix mainframe channel on youtube.com
 
-**The current version you should run is NJE38 v2.2.1 !**
+**The current version you should run is NJE38 v2.3.0!**
 
 Have fun
 
 Moshix
-<br>September 2021
+<br>March 2021
 
