@@ -22,6 +22,6 @@ The included PDF will help you getting it installed. Also, watch my video about 
 Have fun
 
 Moshix
-<br>June 2022<b>  
+<br>June 2023<b>  
 Milan, Italy
 
