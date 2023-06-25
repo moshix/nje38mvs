@@ -2,7 +2,7 @@
 <a href=" https://github.com/moshix/mvs/blob/master/codenotary.com"><img src="https://raw.githubusercontent.com/moshix/mvs/master/secured-by-immudb.svg" width="109px;"/></a>
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fmoshix%2Fnje38mvs%2Ftree%2Fmaster&count_bg=%2377C20B&title_bg=%23080808&icon=&icon_color=%23E7E7E7&title=Hits&edge_flat=true)](https://hits.seeyoufarm.com)
 # nje38mvs
-NJE38: NJE Subsystem for MVS 3.8 - Version 2.4.1
+NJE38: NJE Subsystem for MVS 3.8 - Version 2.4.2
 ================================================
 
 June 2023
@@ -17,11 +17,11 @@ This software is delivered as is with no guarantee, not from Bob and not from me
 
 The included PDF will help you getting it installed. Also, watch my video about how to get it running on the moshix mainframe channel on youtube.com: https://www.youtube.com/watch?v=8_esBksImCg
 
-**The current version you should run is NJE38 v2.4.1!**
+**The current version you should run is NJE38 v2.4.2!**
 
 Have fun
 
 Moshix
-<br>June 2023<b>  
-Milan, Italy
+<br>New York, June 2023<b>  
+
 
