@@ -7,7 +7,7 @@ NJE38: NJE Subsystem for MVS 3.8 - Version 2.4.2
 ================================================
 
 
-This is Bob Polmanter's genial NJE subsystem for MVS 3.8. It works perfectly wiht TK4- MVS 3.8 (update 8), TK3, and Rob Prin's MVS distribution. It will not work if no RAKF is running in your MVS 3.8 distribution. 
+This is Bob Polmanter's genial NJE subsystem for MVS 3.8. It works perfectly with TK4- MVS 3.8 (update 8), TK3, and my own MVS 3.8 TK4+ distribution. It will not work if no RAKF is running in your MVS 3.8 distribution. 
 
 This repo is maintained with the express permission from Bob Polmanter.
 
