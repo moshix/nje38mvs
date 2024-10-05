@@ -13,7 +13,7 @@ This repo is maintained with the express permission from Bob Polmanter.
 
 I contributed **nothing** to this software (other than some feature requests, some ideas, and testing it together with Bob), **all the credits go to Bob Polmanter**. 
 
-This software is delivered as is with no guarantee, not from Bob and not from me. 
+This software is delivered as is, with no guarantee, not from Bob and not from me. 
 
 The included PDF will help you getting it installed. Also, watch my video about how to get it running on the moshix mainframe channel on youtube.com: https://www.youtube.com/watch?v=8_esBksImCg
 
