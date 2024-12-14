@@ -21,7 +21,7 @@ The included PDF will help you getting it installed. Also, watch my video about 
 
 Have fun
 
-Moshix
-<br>New York, October 2024<b>  
+Moshix  
+Krakow, January 2025
 
 
