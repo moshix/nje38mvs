@@ -580,7 +580,4 @@ The condition code is set once (by `CLC 0(4,R6),=F'0'` at 002322), is never
 modified through ORETURN's load instructions, and arrives at `BZ $CCOMM1+4`
 with value 0 (equal). This is why BZ is always taken in the loop state.
 
----
 
-*Analysis performed by direct inspection of the DMTXJC assembler listing,
-06 Mar 2026. All offsets are relative to assembled CSECT base addresses.*
