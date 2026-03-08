@@ -250,6 +250,20 @@ chance to drain.
 
 ### Fix A — Increase `PCTBUFLM` (lowest risk, try first)
 
+Only three TCTs have a `BUFLM` / `BUFCT` field pair. The reader TCT (`RTCT`) and job TCT (`JTCT`)
+use a different layout and have no `BUFLM` field. The three that do are:
+
+| Symbol     | Offset  | Value | TCT              | FCS mask cleared |
+|------------|---------|-------|------------------|------------------|
+| `CCTBUFLM` | 0040AE  | 5     | Control (CTCT)   | `CCTFCS = X'0000'` (no bit) |
+| `WCTBUFLM` | 004116  | 3     | Writer (WTCT)    | `WCTFCS = X'0040'` |
+| `PCTBUFLM` | 004236  | 2     | Printer (PTCT)   | `PCTFCS = X'0001'` |
+
+`CFCSSTD = X'88C1'` requires both `X'0040'` (WCTFCS) and `X'0001'` (PCTFCS) to be present in
+every received buffer. The printer TCT is the bottleneck here: its limit of 2 is reached almost
+immediately during fast file reception. `WCTBUFLM = 3` could also contribute if the writer is
+busy, but during a pure file transfer it is unlikely to be the primary trigger.
+
 In `DMTXJCA`, change:
 
 ```asm
@@ -257,12 +271,11 @@ In `DMTXJCA`, change:
 PCTBUFLM  DC  AL1(2)
 
 ; After:
-PCTBUFLM  DC  AL1(6)    ; or higher — 6 of 8 TP buffers before signaling backpressure
+PCTBUFLM  DC  AL1(6)    ; 6 of 8 TP buffers before signaling backpressure
 ```
 
-Also consider `WCTBUFLM` (writer TCT) and `RCTBUFLM` (reader TCT). The intent: keep more buffers
-in the TCT before clearing the FCS bit, reducing the frequency at which `CWAITBIT` fires during
-full-speed bidirectional transfer.
+`WCTBUFLM` can also be raised if needed (e.g., from 3 to 6), but the printer TCT is the
+primary cause in a receive-while-sending scenario.
 
 **Note:** This does not disable backpressure. It only raises the threshold. If the system is
 under extreme load, the loop could still theoretically occur — just far less often.
@@ -332,9 +345,9 @@ where both sides have the same bug, disabling the check on both sides removes th
    should eliminate the loop in most cases by ensuring at least one MREPUT iteration succeeds
    before COMSUP can re-arm `$TPPNONE`.
 
-2. **Short term**: Apply Fix A (increase `PCTBUFLM` from 2 to 6, similarly raise `WCTBUFLM`
-   and `RCTBUFLM`). Combine with Fix C. This reduces the frequency of `CWAITBIT` and makes
-   Fix C's window of opportunity large enough to reliably break the deadlock.
+2. **Short term**: Apply Fix A (increase `PCTBUFLM` from 2 to 6, and optionally raise
+   `WCTBUFLM` from 3 to 6). Combine with Fix C. This reduces the frequency of `CWAITBIT`
+   and makes Fix C's window of opportunity large enough to reliably break the deadlock.
 
 3. **Proper BSC2CTC fix**: Port Fix B (the `DELAYCNT` delay mechanism) from DMTYJC. This is
    what Peter's driver does and it is the architecturally correct adaptation of the BSC null-
